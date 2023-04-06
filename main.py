@@ -1,4 +1,6 @@
-from tools.prepare import update
+from tools.prepare import update_attack, update_d3fend
+
 
 if __name__ == '__main__':
-    update()
+    update_attack()
+    update_d3fend()
