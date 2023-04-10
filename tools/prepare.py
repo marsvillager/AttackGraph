@@ -1,6 +1,7 @@
 import os
 import subprocess
 
+from neo4j import GraphDatabase
 from tools.config import Config
 
 
@@ -24,3 +25,11 @@ def update_d3fend() -> None:
         return
     else:
         subprocess.call(["git", "clone", Config.D3FEND_URL, Config.D3FEND_DATA_PATH], shell=False)
+
+
+def connect_to_neo4j(uri, user, password):
+    """
+    Define the function to connect to Neo4j.
+    """
+    driver = GraphDatabase.driver(uri, auth=(user, password))
+    return driver
