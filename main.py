@@ -33,6 +33,6 @@ if __name__ == '__main__':
                          Config.CREATE_NODE["basic"], Config.CREATE_REL["basic"])
     delete_duplicate_node(driver, "./data/attack/mobile-attack/mobile-attack.json")
 
-    # insert_json_to_neo4j(driver, "./data/attack/enterprise-attack/enterprise-attack.json",
-    #                      Config.CREATE_NODE["basic"], Config.CREATE_REL["basic"])
-    # delete_duplicate_node(driver, "./data/attack/enterprise-attack/enterprise-attack.json")
+    insert_json_to_neo4j(driver, "./data/attack/enterprise-attack/enterprise-attack.json",
+                         Config.CREATE_NODE["basic"], Config.CREATE_REL["basic"])
+    delete_duplicate_node(driver, "./data/attack/enterprise-attack/enterprise-attack.json")
